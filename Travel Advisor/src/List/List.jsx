@@ -31,10 +31,12 @@ const List = () => {
     { name: "best beer" },
     { name: "awesome drink" },
     { name: "jhakas dinner" },
+    { name: "cool place" },
+    { name: "best beer" },
   ];
 
   return (
-    <div className="flex flex-col ">
+    <div className="flex flex-col">
       <Typography
         className="mx-5 my-2 flex text-3xl align-center"
         variant="h4"
@@ -82,7 +84,8 @@ const List = () => {
         </FormControl>
       </div>
       {/* Cards Section */}
-      <Grid container spacing={3} className="">
+
+      <Grid container spacing={3} sx={{ height: "75vh", overflow: "auto" }}>
         {places?.map((place, i) => (
           <Grid item key={i} xs={12}>
             <PlaceDetails place={place} />
