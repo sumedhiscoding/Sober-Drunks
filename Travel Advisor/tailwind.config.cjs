@@ -7,7 +7,7 @@ module.exports = {
   },
   plugins: [require("daisyui")],
   daisyui: {
-    themes: false,
+    themes: ["cupcake", "dark", "cmyk", "corporate"],
   },
 
   corePlugins: {
