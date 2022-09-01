@@ -59,10 +59,15 @@ const PlaceDetails = ({ place }) => {
               <button class="btn btn-primary font-thin">reserve</button>
             </div>
             {/* mapping over cuisines  */}
-            {place?.cuisine?.map(({ name }) => (
-              <div class="badge badge-secondary badge-outline">{name}</div>
-            ))}
           </div>
+        </div>
+        <div className="badge py-5 px-2">
+          {" "}
+          {place?.cuisine?.map(({ name }) => (
+            <div className="badge badge-secondary badge-outline text-wrap ">
+              {name}
+            </div>
+          ))}
         </div>
       </div>
     </div>
