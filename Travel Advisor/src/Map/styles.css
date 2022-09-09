@@ -1,0 +1,13 @@
+.containercool{
+    position: absolute;
+    transform : translate(-50%, -50%);
+    z-index: 1;
+    transition:all 0.3s;
+    background-color: black;
+    color:white;
+    opacity: 0.8;
+}
+:hover.containercool{
+    z-index: 2;
+    opacity: 1;
+}

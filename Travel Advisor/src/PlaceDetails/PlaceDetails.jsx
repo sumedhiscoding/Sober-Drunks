@@ -1,5 +1,6 @@
 import React from "react";
 import PhoneIcon from "@mui/icons-material/Phone";
+import { Rating } from "@mui/material";
 const PlaceDetails = ({ place }) => {
   return (
     <div className="flex justify-center" data-theme="corporate">
@@ -16,8 +17,12 @@ const PlaceDetails = ({ place }) => {
             class="rounded-xl"
           />
         </figure>
-        <div class="mx-10 mb-4">
+        <div class="mx-5 mb-4">
           <h2 class="font-thin py">{place.name}</h2>
+          <div>
+            {" "}
+            <Rating value={Number(place.rating)} readOnly />
+          </div>
           <p>{place.address}</p>
           <div
             class="card-actions flex flex-col
@@ -27,7 +32,7 @@ const PlaceDetails = ({ place }) => {
               <div className="pr-24">
                 <span className="badge px-2 py-3">Pricing</span>
                 <span
-                  className="badge badge-info px-3 py-3
+                  className="badge badge-info px-3 py-3 text-xs
               "
                 >
                   {place.price_level}
@@ -37,7 +42,7 @@ const PlaceDetails = ({ place }) => {
             <div className=" flex">
               <span className="badge px-2 py-3">Ranking</span>
               <span
-                className="badge badge-success px-3 py-3
+                className="badge badge-success px-3 py-3 text-xs
               "
               >
                 {place.ranking}
@@ -61,10 +66,11 @@ const PlaceDetails = ({ place }) => {
             {/* mapping over cuisines  */}
           </div>
         </div>
-        <div className="badge py-5 px-2">
-          {" "}
+
+        <div className="badge py-6  ">
+          {/* {" "} */}
           {place?.cuisine?.map(({ name }) => (
-            <div className="badge badge-secondary badge-outline text-wrap ">
+            <div className="badge badge-secondary badge-outline text-xs ">
               {name}
             </div>
           ))}

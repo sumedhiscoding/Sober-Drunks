@@ -14,9 +14,10 @@ export const getPlacesData = async (sw, ne) => {
         tr_latitude: ne.lat,
         bl_longitude: sw.lng,
         tr_longitude: ne.lng,
+        limit: "30",
       },
       headers: {
-        "X-RapidAPI-Key": "4b8fc02c4emsh17ecc4aab46bc92p102df7jsn3ed3e773b9ad",
+        "X-RapidAPI-Key": "6e57da2c29msha5b0ed999fb2330p1f2c17jsn84337461630e",
         "X-RapidAPI-Host": "travel-advisor.p.rapidapi.com",
       },
     });
